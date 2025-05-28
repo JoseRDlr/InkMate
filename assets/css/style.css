@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  .accordion-content.active {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+  .back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 2.5rem !important;
+      line-height: 1.2 !important;
+    }
+    .section-title {
+      font-size: 2rem !important;
+    }
+    .feature-title {
+      font-size: 1.5rem !important;
+    }
+  }
