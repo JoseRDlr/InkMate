@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InkMate</title>
+    <title>TattooMate</title>
 
-    <script src="/assets/js/tailwindConfig.js"></script>
-    <script src="/assets/js/tailwindStyle.js"></script>
+    <!-- Favicon References -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#54BD95">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="assets/js/tailwindConfig.js"></script>
+    <script src="assets/js/tailwindStyle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .accordion-item {
             overflow: hidden;
@@ -32,28 +41,69 @@
             display: block;
         }
     </style>
+    <!-- Structured Data (Schema.org) - SoftwareApplication - Español -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TattooMate",
+      "url": "https://tattoomate.co/",
+      "image": "https://tattoomate.co/assets/image/Screenshot.png",
+      "description": "TattooMate es un asistente de automatización de WhatsApp impulsado por IA para artistas del tatuaje. Automatiza respuestas, agenda citas, envía recordatorios y gestiona las comunicaciones con los clientes sin esfuerzo, para que puedas concentrarte en tatuar.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "WebPlatform",
+      "offers": {
+        "@type": "Offer",
+        "description": "Servicio de automatización de WhatsApp para artistas del tatuaje.",
+        "priceCurrency": "USD", 
+        "availability": "https://schema.org/OnlineOnly"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TattooMate"
+      }
+    }
+    </script>
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn, etc.) - Español -->
+    <meta property="og:title" content="TattooMate - Automatización de WhatsApp para Artistas del Tatuaje" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tattoomate.co/" />
+    <meta property="og:image" content="https://tattoomate.co/assets/image/Screenshot.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="¡Deja de perder clientes! El asistente con IA de TattooMate automatiza tu WhatsApp, agenda citas y envía recordatorios 24/7. Concéntrate en tu arte, nosotros nos encargamos de los mensajes." />
+    <meta property="og:site_name" content="TattooMate" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card Meta Tags - Español -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TattooMate - Automatización de WhatsApp para Artistas del Tatuaje" />
+    <meta name="twitter:description" content="¡Deja de perder clientes! El asistente con IA de TattooMate automatiza tu WhatsApp, agenda citas y envía recordatorios 24/7. Concéntrate en tu arte, nosotros nos encargamos de los mensajes." />
+    <meta name="twitter:image" content="https://tattoomate.co/assets/image/Screenshot.png" />
+    <!-- <meta name="twitter:site" content="@TattooMateApp" /> -->
+    <!-- <meta name="twitter:creator" content="@TuUsuarioDeTwitter" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W31E8KQH8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5W31E8KQH8');
+    </script>
+
+    <!-- HubSpot Form Embed Script -->
+    <script src="https://js.hsforms.net/forms/embed/50109496.js" defer></script>
 </head>
 
-<body class="text-gray-900 font-sans bg-gradient-to-r from-[#fff] via-[#fff] to-[#54BE96]">
+<body class="text-gray-900 font-sans bg-gradient-to-r from-[#fff] via-[#fff] to-[#54be9669]">
     <!-- Menú -->
     <header class="container px-4 sm:px-6 lg:px-20 py-4">
         <nav class="flex flex-col md:flex-row items-center justify-between w-full gap-4">
             <div>
-                <h1 class="text-3xl md:text-5xl text-[#54BD95] font-normal"><strong>Ink</strong>Mate</h1>
-            </div>
-            <div class="relative w-full md:w-auto">
-                <form class="w-full whatsapp-form">
-                    <input 
-                        type="text" 
-                        name="whatsapp" 
-                        placeholder="Escribe tu WhatsApp" 
-                        class="text-base md:text-lg border border-gray-300 rounded-full w-full md:w-[292px] h-[55px] px-4" 
-                        required
-                    />
-                    <button type="submit" class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                        <i class="fas fa-paper-plane text-white text-lg"></i>
-                    </button>
-                </form>
+                <h1 class="text-3xl md:text-5xl text-[#54BD95] font-normal"><strong>Tattoo</strong>Mate</h1>
             </div>
         </nav>
     </header>
@@ -66,17 +116,25 @@
                     <h1 class="hero-text text-4xl md:text-5xl lg:text-6xl text-[#000] text-left font-bold leading-[100%]">Automatiza tu <span class="text-[#54BD95]">WhatsApp</span> y olvídate de responder mensajes todo el día</h1>
                     <p class="text-base md:text-lg font-medium text-[#000] text-left mb-6 mt-4 md:mt-6">Nuestro asistente impulsado por inteligencia artificial responde por ti, agenda citas, envía recordatorios y cobra online mientras tú solo te concentras en tatuar.</p>
                     <div class="flex flex-col items-start justify-start w-full">
-                        <div class="relative w-full mb-6">
-                            <input type="text" placeholder="Escribe tu Whatsapp para contactarte" class="text-base md:text-lg border border-gray-300 rounded-full w-full h-[55px] bg-[#F9F9F9] px-4" />
-                            <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                                <i class="fas fa-paper-plane text-white text-lg"></i>
-                            </button>
-                        </div>
-                        <small class="text-[#000] text-sm md:text-base font-medium">🟢 Ingresa tu número de WhatsApp para comenzar</small>
+                      	<p class="text-[#000] text-sm md:text-base font-bold">Comienza por WhatsApp, déjanos tus datos y te contactamos pronto</p>
+                        <form class="whatsapp-form w-full mb-6">
+                            <div class="relative w-full">
+                                <div class="flex items-start justify-start">
+                                    <button 
+                                        type="button"
+                                        class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                                        onclick="openModal()"
+                                    >
+                                        <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                                        Déjanos tus datos aquí
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="flex items-center justify-center md:justify-center lg:justify-end w-full lg:w-1/2 mt-8 lg:mt-0">
-                    <img src="/assets/image/WhatsAppView.png" class="w-full max-w-[480px] h-auto"/>
+                    <img src="assets/image/AutomatizaTuWhatsApp.png" class="w-full max-w-[630px] h-auto"/>
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center w-full mt-8 md:mt-16">
@@ -93,13 +151,21 @@
                     <p class="text-base md:text-lg font-semibold leading-[30px] text-[#545454] mt-4 md:mt-6">Haz crecer tu estudio sin perder tiempo atendiendo mensajes y enfócate en lo que realmente importa: crear arte increíble.</p>
                 </div>
                 <div class="flex flex-col items-start justify-start w-full">
-                    <p class="text-base md:text-lg font-bold leading-[30px] text-[#545454] mb-3 md:mb-5">Deja tu WhatsApp y te contactaremos</p>
-                    <div class="relative w-full">
-                        <input type="text" placeholder="Escribe tu Whatsapp para contactarte" class="text-base md:text-lg border border-gray-300 rounded-full w-full h-[55px] px-4" />
-                        <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                            <i class="fas fa-paper-plane text-white text-lg"></i>
-                        </button>
-                    </div>
+                    <p class="text-[#000] text-sm md:text-base font-bold">Comienza por WhatsApp, déjanos tus datos y te contactamos pronto</p>
+                    <form class="whatsapp-form w-full mb-6">
+                      <div class="relative w-full">
+                        <div class="flex items-start justify-start">
+                          <button 
+                            type="button"
+                            class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                            onclick="openModal()"
+                          >
+                            <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                            Déjanos tus datos aquí
+                          </button>
+                        </div>
+                      </div>
+                  	</form>
                 </div>
 
                 <div class="flex flex-row sm:flex-row items-start justify-center md:justify-center lg:justify-start gap-4 md:gap-10 w-full">
@@ -138,7 +204,7 @@
             <div class="flex flex-col items-start justify-start gap-4 md:gap-6 w-full lg:w-1/2 mt-8 lg:mt-0">
                 <div class="flex flex-col md:flex-row items-start justify-center md:justify-center lg:justify-start gap-3 md:gap-4">
                     <div class="flex items-center justify-center md:justify-end lg:justify-center w-full md:w-auto lg:w-auto">
-                        <img src="/assets/image/RespuestaAutomatica.svg" alt="Respuestas automáticas 24/7" class="h-auto w-auto">
+                        <img src="assets/image/RespuestaAutomatica.svg" alt="Respuestas automáticas 24/7" class="h-auto w-auto">
                     </div>
                     <div class="flex flex-col items-center md:items-center lg:items-start justify-start gap-1 md:gap-2">
                         <h4 class="feature-title text-xl md:text-2xl text-[#191A15] font-bold leading-[100%] text-center md:text-center lg:text-left">Respuestas automáticas 24/7</h4>
@@ -147,7 +213,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-start justify-center md:justify-center lg:justify-start gap-3 md:gap-4">
                     <div class="flex items-center justify-center md:justify-end lg:justify-center w-full md:w-auto lg:w-auto">
-                        <img src="/assets/image/AgendaIntegrada.svg" alt="Agenda integrada con recordatorios" class="h-auto w-auto">
+                        <img src="assets/image/AgendaIntegrada.svg" alt="Agenda integrada con recordatorios" class="h-auto w-auto">
                     </div>
                     <div class="flex flex-col items-center md:items-center lg:items-start justify-start gap-1 md:gap-2">
                         <h4 class="feature-title text-xl md:text-2xl text-[#191A15] font-bold leading-[100%] text-center md:text-center lg:text-left">Agenda integrada con recordatorios</h4>
@@ -156,7 +222,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-start justify-center md:justify-center lg:justify-start gap-3 md:gap-4">
                     <div class="flex items-center justify-center md:justify-end lg:justify-center w-full md:w-auto lg:w-auto">
-                        <img src="/assets/image/PagosDirectos.svg" alt="Pagos directos online" class="h-auto w-auto">
+                        <img src="assets/image/PagosDirectos.svg" alt="Pagos directos online" class="h-auto w-auto">
                     </div>
                     <div class="flex flex-col items-center md:items-center lg:items-start justify-start gap-1 md:gap-2">
                         <h4 class="feature-title text-xl md:text-2xl text-[#191A15] font-bold leading-[100%] text-center md:text-center lg:text-left">Pagos directos online</h4>
@@ -165,7 +231,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-start justify-center md:justify-center lg:justify-start gap-3 md:gap-4">
                     <div class="flex items-center justify-center md:justify-end lg:justify-center w-full md:w-auto lg:w-auto">
-                        <img src="/assets/image/AumentaTusVentas.svg" alt="Aumenta tus ventas" class="h-auto w-auto">
+                        <img src="assets/image/AumentaTusVentas.svg" alt="Aumenta tus ventas" class="h-auto w-auto">
                     </div>
                     <div class="flex flex-col items-center md:items-center lg:items-start justify-start gap-1 md:gap-2">
                         <h4 class="feature-title text-xl md:text-2xl text-[#191A15] font-bold leading-[100%] text-center md:text-center lg:text-left">Aumenta tus ventas</h4>
@@ -178,35 +244,35 @@
         <!-- Sección 3 -->
         <section class="container py-10 px-4 sm:px-6 lg:px-20 flex flex-col items-center justify-center w-full h-full bg-transparent mt-10">
             <div class="flex flex-col lg:flex-row items-center justify-center w-full gap-8 md:gap-10">
-                <div class="flex flex-col items-center lg:items-start justify-center w-full lg:w-[50%]">
+                <div class="flex flex-col gap-5 items-center lg:items-start justify-center w-full lg:w-[50%]">
                     <div class="text-center lg:text-left">
                         <h1 class="text-3xl md:text-4xl lg:text-[50px] font-bold leading-[100%] text-[#191A15] section-heading">Un proceso simple que funciona en piloto automático</h1>
                     </div>
                     <div class="flex items-center justify-center lg:justify-start mt-6 md:mt-10 w-full">
                         <ul class="flex flex-col items-center lg:items-start justify-start gap-3 md:gap-4 w-full">
                             <li class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-3 w-full">
-                                <img src="/assets/image/Check.svg" class="w-8 h-8" />
+                                <img src="assets/image/Check.svg" class="w-8 h-8" />
                                 <div class="flex flex-col items-center sm:items-start justify-start text-center sm:text-left">
                                     <p class="text-base md:text-[18px] text-[#191A15]"><strong>Cliente te escribe</strong></p>
                                     <p class="text-base md:text-[18px] font-normal text-[#191A15]">El cliente envía un mensaje a tu WhatsApp con su consulta sobre tatuajes.</p>
                                 </div>
                             </li>
                             <li class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-3 w-full">
-                                <img src="/assets/image/Check.svg" class="w-8 h-8" />
+                                <img src="assets/image/Check.svg" class="w-8 h-8" />
                                 <div class="flex flex-col items-center sm:items-start justify-start text-center sm:text-left">
-                                    <p class="text-base md:text-[18px] text-[#191A15]"><strong>InkMate responde y agenda</strong></p>
+                                    <p class="text-base md:text-[18px] text-[#191A15]"><strong>TattooMate responde y agenda</strong></p>
                                     <p class="text-base md:text-[18px] font-normal text-[#191A15]">El Asistente con AI resuelve dudas comunes y agenda la cita automáticamente.</p>
                                 </div>
                             </li>
                             <li class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-3 w-full">
-                                <img src="/assets/image/Check.svg" class="w-8 h-8" />
+                                <img src="assets/image/Check.svg" class="w-8 h-8" />
                                 <div class="flex flex-col items-center sm:items-start justify-start text-center sm:text-left">
                                     <p class="text-base md:text-[18px] text-[#191A15]"><strong>Envía link de pago</strong></p>
                                     <p class="text-base md:text-[18px] font-normal text-[#191A15]">Si necesitas anticipo, el bot envía un enlace de pago seguro automáticamente.</p>
                                 </div>
                             </li>
                             <li class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-3 w-full">
-                                <img src="/assets/image/Check.svg" class="w-8 h-8" />
+                                <img src="assets/image/Check.svg" class="w-8 h-8" />
                                 <div class="flex flex-col items-center sm:items-start justify-start text-center sm:text-left">
                                     <p class="text-base md:text-[18px] text-[#191A15]"><strong>Recordatorios automáticos</strong></p>
                                     <p class="text-base md:text-[18px] font-normal text-[#191A15]">Ambos reciben recordatorios antes de la cita para evitar cancelaciones.</p>
@@ -216,7 +282,7 @@
                     </div>    
                 </div>
                 <div class="flex items-center justify-center w-full lg:w-[50%] mt-8 lg:mt-0">
-                    <img src="/assets/image/ProcesoSimple.png" alt="Proceso Simple" class="w-full h-auto max-w-[600px]">
+                    <img src="assets/image/WhatsAppView2.png" alt="Proceso Simple" class="w-full h-auto md:h-[630px] lg:h-[630px] max-w-[480px]">
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center w-full h-full mt-10">
@@ -233,31 +299,37 @@
                         <div class="bg-[#F9FAFB] p-4 md:p-5 rounded-md m-4 md:m-8">
                             <ul class="space-y-3 md:space-y-4">
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">1 número de WhatsApp</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Flujos automáticos</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Agenda + recordatorios</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Soporte por chat</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Links de pago personalizados</span>
                                 </li>
                             </ul>
-                            <div class="relative flex items-center justify-center mx-auto mt-4 md:mt-5">
-                                <input type="text" placeholder="Escribe tu Whatsapp" class="text-base md:text-[18px] border bg-[#fff] border-gray-300 rounded-full w-full h-[55px] px-4" />
-                                <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                                    <i data-lucide="send" class="text-[#fff] text-[18px] mr-0.5"></i>
-                                </button>
+                            <div class="relative w-full mt-5">
+                                <div class="flex items-start justify-start">
+                                    <button 
+                                        type="button"
+                                        class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                                        onclick="openModal()"
+                                    >
+                                        <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                                        Déjanos tus datos aquí
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -270,31 +342,37 @@
                         <div class="bg-[#fff] p-4 md:p-5 rounded-md m-4 md:m-8">
                             <ul class="space-y-3 md:space-y-4">
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">2 números de WhatsApp</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Todo lo del plan Básico</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Soporte prioritario</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Análisis de mensajes</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Prototipo automático del diseño</span>
                                 </li>
                             </ul>
-                            <div class="relative flex items-center justify-center mx-auto mt-4 md:mt-5">
-                                <input type="text" placeholder="Escribe tu Whatsapp" class="text-base md:text-[18px] border bg-[#fff] border-gray-300 rounded-full w-full h-[55px] px-4" />
-                                <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                                    <i data-lucide="send" class="text-[#fff] text-[18px] mr-0.5"></i>
-                                </button>
+                            <div class="relative w-full mt-5">
+                                <div class="flex items-start justify-start">
+                                    <button 
+                                        type="button"
+                                        class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                                        onclick="openModal()"
+                                    >
+                                        <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                                        Déjanos tus datos aquí
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -307,31 +385,37 @@
                         <div class="bg-[#F9FAFB] p-4 md:p-5 rounded-md m-4 md:m-8">
                             <ul class="space-y-3 md:space-y-4">
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Todo lo del plan Pro</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Tienda integrada</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Reportes avanzados</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Múltiples operadores</span>
                                 </li>
                                 <li class="flex items-start justify-start gap-2 md:gap-3">
-                                    <img src="/assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
+                                    <img src="assets/image/Check.svg" class="w-6 h-6 md:w-[32px] md:h-[32px]" />
                                     <span class="text-sm md:text-base">Venta de productos y suplementos</span>
                                 </li>
                             </ul>
-                            <div class="relative flex items-center justify-center mx-auto mt-4 md:mt-5">
-                                <input type="text" placeholder="Escribe tu Whatsapp" class="text-base md:text-[18px] border bg-[#fff] border-gray-300 rounded-full w-full h-[55px] px-4" />
-                                <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                                    <i data-lucide="send" class="text-[#fff] text-[18px] mr-0.5"></i>
-                                </button>
+                            <div class="relative w-full mt-5">
+                                <div class="flex items-start justify-start">
+                                    <button 
+                                        type="button"
+                                        class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                                        onclick="openModal()"
+                                    >
+                                        <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                                        Déjanos tus datos aquí
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -355,7 +439,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="p-4 md:p-6 pt-0 md:pt-6 text-gray-600 text-sm md:text-base">
-                            No es necesario. InkMate funciona con tu número actual de WhatsApp, sin necesidad de cambiarlo o adquirir uno nuevo. Todo sigue igual, pero ahora con un asistente que te ayuda.
+                            No es necesario. TattooMate funciona con tu número actual de WhatsApp, sin necesidad de cambiarlo o adquirir uno nuevo. Todo sigue igual, pero ahora con un asistente que te ayuda.
                         </div>
                     </div>
                 </div>
@@ -411,85 +495,59 @@
                     <h1 class="hero-text text-4xl md:text-5xl lg:text-[40px] text-[#fff] leading-[100%] w-full md:w-full lg:w-[73%] text-center md:text-center lg:text-left">Únete a los tatuadores que ya no pierden clientes por mensajes sin responder.</h1>
                     <p class="text-[18px] font-bold text-[#A6A6A6] mt-12 text-center md:text-center lg:text-left">Más de 500 tatuadores ya están automatizando sus consultas y aumentando sus ventas. ¿Qué esperas?</p>
                     <a href="tel:01302204800" class="text-[15px] text-[18px] font-bold text-[#A6A6A6] mt-10 text-center md:text-center lg:text-left">100% Seguro • Sin tarjeta de crédito • Soporte 24/7</a>
-                    <a href="#" class="text-[18px] font-bold text-[#A6A6A6] mt-10 mb-5 text-center md:text-center lg:text-left">Ellos ya confiaron en InkMate</a>
+                    <a href="#" class="text-[18px] font-bold text-[#A6A6A6] mt-10 mb-5 text-center md:text-center lg:text-left">Ellos ya confiaron en TattooMate</a>
                     <div class="flex items-start justify-center md:justify-center lg:justify-start gap-3 w-full">
-                        <img class="w-10 h-10 rounded-full" src="/assets/image/Avatar1.png" alt="Rounded avatar">
-                        <img class="w-10 h-10 rounded-full" src="/assets/image/Avatar2.png" alt="Rounded avatar">
-                        <img class="w-10 h-10 rounded-full" src="/assets/image/Avatar3.png" alt="Rounded avatar">
-                        <img class="w-10 h-10 rounded-full" src="/assets/image/Avatar4.png" alt="Rounded avatar">
+                        <img class="w-10 h-10 rounded-full" src="assets/image/Avatar1.png" alt="Rounded avatar">
+                        <img class="w-10 h-10 rounded-full" src="assets/image/Avatar2.png" alt="Rounded avatar">
+                        <img class="w-10 h-10 rounded-full" src="assets/image/Avatar3.png" alt="Rounded avatar">
+                        <img class="w-10 h-10 rounded-full" src="assets/image/Avatar4.png" alt="Rounded avatar">
                         <div class="w-10 h-10 rounded-full flex items-center justify-center bg-[#161C28] border-2 border-[#A6A6A6]">
                             <p class="text-[12px] text-[#A6A6A6]">+ 500</p> 
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col items-center justify-center w-full md:w-full lg:w-[50%] mt-10 md:mt-10 lg:mt-0">
-                     <form id="contact-form" class="w-full md:w-full lg:w-[610px] mx-auto bg-[#222938] p-8 rounded-xl">
-                        <div class="flex items-center justify-center">
-                            <h3 class="text-[50px] text-[#fff] font-bold mb-4"><strong class="text-[#54BD95]">Ink</strong><span class="!font-normal">Mate</span></h3>
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="email" class="block text-[#fff] font-medium mb-2">Correo</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="Escribe tu correo" 
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                required
-                            >
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="message" class="block text-[#fff] font-medium mb-2">Mensaje</label>
-                            <textarea 
-                                id="message" 
-                                name="message"
-                                rows="4"
-                                placeholder="¿Cuál es tu mensaje?"
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                            >
-                            </textarea>
-                        </div>
-                        
-                        <div class="flex items-center mb-6">
-                            <input 
-                                type="checkbox" 
-                                id="terms" 
-                                name="terms" 
-                                class="w-4 h-4 text-primary rounded border-gray-300 focus:ring-primary"
-                                required
-                            >
-                            <label for="terms" class="ml-2 text-gray-600 text-sm">Acepto los términos y condiciones de privacidad</label>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-primary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                            Quiero que me contacten
-                        </button>
-                    </form>
+                    <div id="hubspot-form-container" class="w-full md:w-full lg:w-[610px] mx-auto bg-[#ffffff] p-8 rounded-xl">
+                        <!-- HubSpot Form Script -->
+                        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                          hbspt.forms.create({
+                            region: "na1",
+                            portalId: "50109496",
+                            formId: "7118bc5a-5d8d-4eff-aff4-e54db3b18750",
+                            target: '#hubspot-form-container'
+                          });
+                        </script>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-col lg:flex-row items-center md:items-center lg:items-start justify-center md:justify-center lg:justify-start gap-8 w-full">
                 <div class="flex flex-col items-center md:items-center lg:items-start justify-center md:justify-center lg:justify-start w-full md:w-full lg:w-[50%]">
-                    <h3 class="text-[50px] text-[#fff] font-bold mb-4"><strong class="text-[#54BD95]">Ink</strong><span class="!font-normal">Mate</span></h3>
+                    <h3 class="text-[50px] text-[#fff] font-bold mb-4"><strong class="text-[#54BD95]">Tattoo</strong><span class="!font-normal">Mate</span></h3>
                     <p class="text-[#A6A6A6] w-[60%]">
                         La plataforma de automatización de WhatsApp diseñada específicamente para tatuadores y estudios de tatuaje.
                     </p>
-                    <div class="relative flex items-end justify-end mt-10">
-                        <input type="text" placeholder="Escribe tu Whatsapp para contactarte" class="text-[18px] border border-gray-300 rounded-full w-full h-[55px] bg-[#161C28]" />
-                        <button class="flex items-center justify-center absolute top-2 right-3 border-0 rounded-full bg-[#54BD95] w-[40px] h-[40px]">
-                            <i data-lucide="send" class="text-[#fff] text-[18px] mr-0.5"></i>
-                        </button>
-                    </div>
+                    <div class="relative w-full">
+                        <div class="flex items-start justify-start">
+                          <button 
+                            type="button"
+                            class="flex items-center justify-center w-full md:w-full lg:w-[300px] h-[60px] bg-[#54BD95] rounded-full text-white text-base md:text-lg font-bold mt-3 shadow-[5px_15px_20px_-15px_#54BD95] hover:shadow-[0_5px_15px_0_#54BD95] transition-all duration-300 ease-in-out" 
+                            onclick="openModal()"
+                           >
+                            <img src="/assets/image/logos_whatsapp-icon.svg" alt="WhatsApp" class="w-auto h-auto mr-2"/>
+                            Déjanos tus datos aquí
+                          </button>
+                        </div>
+                  	</div>
                 </div>
                 <div class="w-full md:w-full lg:w-[50%] flex flex-col md:flex-col lg:flex-row items-center md:items-center lg:items-start justify-center md:justify-end lg:justify-end gap-10">
                     <div class="w-auto flex flex-col item-end justify-end">
                         <h4 class="text-lg font-semibold mb-4 text-[#A6A6A6]">Contacto</h4>
                         <ul class="space-y-2 flex flex-col items-start justify-start gap-5">
                             <li >
-                                <a href="mailto:hola@inkmate.co" class="text-[#A6A6A6] hover:text-white transition duration-300 flex items-start justify-start gap-3">
+                                <a href="mailto:info@tattoomate.co" class="text-[#A6A6A6] hover:text-white transition duration-300 flex items-start justify-start gap-3">
                                     <i data-lucide="mail" class="text-[#fff] text-[18px] mr-0.5"></i>
-                                    hola@inkmate.co
+                                    info@tattoomate.co
                                 </a>
                             </li>
                             <li>
@@ -519,7 +577,7 @@
                 </div>
             </div>
             <div class="flex items-center justify-center md:justify-center lg:justify-start w-full h-[85px]">
-                <p class="text-[18px] font-normal text-[#fff]">© 2025 InkMate. Copyright and rights reserved.</p>
+                <p class="text-[18px] font-normal text-[#fff]">© 2025 TattooMate. Copyright and rights reserved.</p>
             </div>
         </footer>
  
@@ -532,34 +590,11 @@
     </main>
 
     <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
-    <script src="/assets/js/lucideIcons.js"></script>
+    <script src="assets/js/lucideIcons.js"></script>
     <script>
         lucide.createIcons();
     </script>
     <script>
-
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send this data to your backend or WhatsApp API
-            // For demonstration, we'll just open WhatsApp with a pre-filled message
-            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
-                `Hola InkMate, estoy interesado en sus servicios.\n\n` +
-                `Correo: ${email}\n` +
-                `Mensaje: ${message}`
-            )}`;
-            
-            window.open(whatsappUrl, '_blank');
-            
-            // Reset form
-            this.reset();
-            
-            // Show success message
-            alert('¡Gracias por tu interés! Te contactaremos pronto por WhatsApp.');
-        });
 
         document.querySelectorAll('.accordion-btn').forEach(button => {
             button.addEventListener('click', () => {
@@ -574,7 +609,7 @@
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const phone = link.getAttribute('href').replace('https://wa.me/', '');
-                const message = encodeURIComponent('Hola, quiero más información sobre InkMate');
+                const message = encodeURIComponent('Hola, quiero más información sobre TattooMate');
                 window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
             });
         });
@@ -597,6 +632,59 @@
             });
         });
     </script>
+<!-- HubSpot Form Modal -->
+<div id="hubspotModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+  <div style="background-color:#fff; margin:auto; padding:25px; border-radius:8px; width:90%; max-width:550px; position:relative; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    <span id="closeHubspotModal" style="color:#aaa; position:absolute; top:10px; right:15px; font-size:28px; font-weight:bold; cursor:pointer;">&times;</span>
+    <h3 style="text-align:center; margin-top:0; margin-bottom:20px; font-size:1.5em; color:#333;">Completa tus datos</h3>
+    <!-- HubSpot Form Embed Code -->
+    <div class="hs-form-frame" data-region="na1" data-form-id="768cb81c-5ef7-42db-8c43-b2cc2431aee3" data-portal-id="50109496"></div>
+  </div>
+</div>
+
+<script>
+    let hubspotModal; // Declare hubspotModal globally
+
+    // Define openModal globally
+    function openModal() {
+        if (hubspotModal) {
+            hubspotModal.style.display = 'flex';
+        }
+    }
+
+    // Define closeModal globally
+    function closeModal() {
+        if (hubspotModal) {
+            hubspotModal.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize hubspotModal once the DOM is loaded
+        hubspotModal = document.getElementById('hubspotModal'); 
+        
+        const closeButton = document.getElementById('closeHubspotModal');
+        const whatsappForms = document.querySelectorAll('.whatsapp-form');
+
+        whatsappForms.forEach(form => {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                openModal(); // Calls global openModal
+            });
+        });
+
+        if (closeButton) {
+            closeButton.addEventListener('click', closeModal); // Calls global closeModal
+        }
+
+        window.addEventListener('click', function(event) {
+            // Check against the initialized global hubspotModal
+            if (hubspotModal && event.target == hubspotModal) { 
+                closeModal(); // Calls global closeModal
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
